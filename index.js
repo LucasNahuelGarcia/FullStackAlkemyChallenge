@@ -31,10 +31,6 @@ app.use(session({
     secret: uuid.v4(),
 }))
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/', 'balance/'));
-});
-
 app.post('/api/addTransaction', (req, res) => {
     console.log(req.body);
     pool.query("insert into transactions(title, amount, session_id) values(?, ?, ?)", [
