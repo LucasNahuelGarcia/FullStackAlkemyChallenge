@@ -15,6 +15,7 @@
     "express-session-mariadb-store": "^0.1.4",
     "mariadb": "^3.0.1",
     "morgan": "^1.10.0",
+    "named-placeholders": "^1.1.2",
     "uuid": "^9.0.0"
   }
 }
