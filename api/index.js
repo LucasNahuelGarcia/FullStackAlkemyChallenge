@@ -1,5 +1,5 @@
 module.exports = function (app, pool) {
-    app.get('/api/getTransactions', (req, res) => {
+    app.get('/api/transactions', (req, res) => {
         pool.query("SELECT title,amount FROM transactions WHERE session_id = ?;",
             [
                 req.sessionID
@@ -11,8 +11,8 @@ module.exports = function (app, pool) {
             });
     });
 
-    app.post('/api/addTransaction', (req, res) => {
-        pool.query("insert into transactions(title, amount, session_id) values(?, ?, ?)",
+    app.post('/api/transactions', (req, res) => {
+        pool.query("INSERT INTO transactions(title, amount, session_id) VALUES(?, ?, ?)",
             [
                 req.body.title,
                 req.body.amount,
