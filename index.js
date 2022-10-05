@@ -1,12 +1,10 @@
 const env = require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
-const db = require('mariadb');
 const session = require('express-session');
 const mariadb = require('mariadb');
 const MariaDBStore = require('express-session-mariadb-store');
 const uuid = require('uuid');
-const path = require('path');
 const app = express();
 
 const options = {
